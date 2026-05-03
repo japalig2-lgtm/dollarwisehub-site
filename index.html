@@ -5,9 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DollarWiseHub America - USA Jobs & Tools</title>
+<title>DollarWiseHub America</title>
 
 <style>
+
 body {margin:0;font-family:Arial;background:#f4f6f9}
 
 /* HEADER */
@@ -17,7 +18,6 @@ header {
   text-align:center;
 }
 
-/* USA COLOR TITLE */
 .logo {
   font-size:24px;
   font-weight:bold;
@@ -31,66 +31,57 @@ nav {
   display:flex;
   justify-content:center;
   background:#1a1a1a;
-  flex-wrap:wrap;
 }
 nav a {color:white;padding:10px 15px;text-decoration:none}
 
-/* TICKER */
-.ticker {background:#d90429;color:white;overflow:hidden;white-space:nowrap}
-.ticker p {display:inline-block;padding-left:100%;animation:scroll 15s linear infinite}
-@keyframes scroll {100%{transform:translateX(-100%)}}
+/* CONTAINER */
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:10px;
+}
 
-/* LAYOUT */
-.layout {display:flex;max-width:1200px;margin:auto;gap:15px}
-.main {flex:3}
-.sidebar {flex:1}
-
-/* GRID */
-.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+/* GRID FIXED */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
 
 /* CARD */
 .card {
   background:white;
   border-radius:10px;
   overflow:hidden;
-  transition:0.3s;
   cursor:pointer;
+  transition:0.3s;
 }
-.card:hover {transform:scale(1.03)}
-.card img {width:100%;height:140px;object-fit:cover}
+.card:hover {transform:translateY(-5px)}
+.card img {width:100%;height:150px;object-fit:cover}
 .card h3 {padding:10px;margin:0}
 
-/* TOOL CARD */
-.tool-card {
-  background:white;
-  padding:12px;
-  border-radius:8px;
-  margin-bottom:10px;
-  cursor:pointer;
-}
-
-/* AUTO SCROLL */
-.auto-scroll {
-  overflow:hidden;
-}
+/* SCROLL */
+.auto-scroll {overflow:hidden}
 .scroll-track {
   display:flex;
   gap:10px;
   animation:scrollX 20s linear infinite;
 }
-@keyframes scrollX {
-  100% {transform:translateX(-50%)}
-}
+@keyframes scrollX {100%{transform:translateX(-50%)}}
 
 .scroll-card {
   min-width:240px;
   background:white;
   border-radius:10px;
 }
-.scroll-card img {
-  width:100%;
-  height:130px;
-  object-fit:cover;
+.scroll-card img {width:100%;height:130px;object-fit:cover}
+
+/* MOBILE */
+@media(max-width:900px){
+  .grid {grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .grid {grid-template-columns:1fr}
 }
 
 /* FOOTER */
@@ -100,32 +91,12 @@ footer {
   text-align:center;
   padding:20px;
 }
+footer a {color:#ddd;margin:0 10px}
 
-footer a {
-  color:#ddd;
-  margin:0 10px;
-  text-decoration:none;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.layout {flex-direction:column}
-}
 </style>
-
 </head>
 
 <body>
-
-  <!-- TOP INFO BAR -->
-<div style="background:#111;color:white;padding:5px;text-align:center;font-size:12px">
-🌡 32°C | Gold $2000 | USA Jobs Hiring | Live Updates
-</div>
-
-<!-- BREAKING NEWS -->
-<div style="background:red;color:white;padding:8px;font-weight:bold">
-🔥 Breaking: High Paying USA Jobs Open Now | Visa Updates 2026
-</div>
 
 <header>
 <div class="logo">🇺🇸 DollarWiseHub America 💲</div>
@@ -138,121 +109,31 @@ footer a {
 <a href="#">Legal</a>
 </nav>
 
-<div class="ticker">
-<p>🔥 USA Jobs Hiring | Salary Tools | Visa Updates | High Paying Careers</p>
-</div>
-
-  <!-- TRENDING STRIP -->
-<div style="background:#eee;padding:8px;overflow:auto;white-space:nowrap">
-<span style="margin-right:15px">🔥 Trending:</span>
-<span style="margin-right:15px">USA Jobs</span>
-<span style="margin-right:15px">H1B Visa</span>
-<span style="margin-right:15px">Remote Work</span>
-<span style="margin-right:15px">High Salary</span>
-</div>
-
-<div class="layout">
-
-<div class="main">
-
-  <!-- HERO NEWS SECTION -->
-<h2 style="margin:10px">📰 Top Stories</h2>
-
-<div style="display:grid;grid-template-columns:2fr 1fr;gap:10px">
-
-<div class="card" onclick="location.href='post1.html'">
-<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
-<h3 style="font-size:20px">USA Visa Big Update 2026</h3>
-</div>
-
-<div>
-<div class="card" onclick="location.href='post2.html'">
-<h3>Top IT Jobs USA</h3>
-</div>
-
-<div class="card" onclick="location.href='post3.html'">
-<h3>Remote Jobs Growing</h3>
-</div>
-</div>
-
-</div>
+<div class="container">
 
 <h2>🔥 Featured Jobs</h2>
 
 <div class="grid">
 
-<div class="card" onclick="location.href='post1.html'">
-<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
-<h3>USA Visa Guide</h3>
-</div>
+<div class="card" onclick="location.href='post1.html'"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216"><h3>USA Visa Guide</h3></div>
+<div class="card" onclick="location.href='post2.html'"><img src="https://images.unsplash.com/photo-1581092334421-2d7fba0a8b0c"><h3>Top IT Jobs USA</h3></div>
+<div class="card" onclick="location.href='post3.html'"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"><h3>Remote Jobs USA</h3></div>
 
-<div class="card" onclick="location.href='post2.html'">
-<img src="https://images.unsplash.com/photo-1581092334421-2d7fba0a8b0c">
-<h3>Top IT Jobs USA</h3>
-</div>
-
-<div class="card" onclick="location.href='post3.html'">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-<h3>Remote Jobs USA</h3>
-</div>
-
-<div class="card" onclick="location.href='post4.html'">
-<img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c">
-<h3>Freelancing USA</h3>
-</div>
-
-<div class="card" onclick="location.href='post5.html'">
-<img src="https://images.unsplash.com/photo-1531482615713-2afd69097998">
-<h3>Truck Jobs USA</h3>
-</div>
-
-<div class="card" onclick="location.href='post6.html'">
-<img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3">
-<h3>Healthcare Jobs</h3>
-</div>
+<div class="card" onclick="location.href='post4.html'"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c"><h3>Freelancing USA</h3></div>
+<div class="card" onclick="location.href='post5.html'"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998"><h3>Truck Jobs USA</h3></div>
+<div class="card" onclick="location.href='post6.html'"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3"><h3>Healthcare Jobs</h3></div>
 
 </div>
 
-  <h2>💼 Jobs & Career</h2>
-
-<div class="grid">
-<div class="card"><h3>Software Jobs USA</h3></div>
-<div class="card"><h3>Driver Jobs USA</h3></div>
-<div class="card"><h3>Hotel Jobs USA</h3></div>
-<div class="card"><h3>Factory Jobs USA</h3></div>
-</div>
-
-<!-- LEGAL AUTO SCROLL BACK -->
 <h2>⚖️ Legal & Immigration Help</h2>
 
 <div class="auto-scroll">
 <div class="scroll-track">
 
-<div class="scroll-card">
-<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f">
-<p>Immigration Lawyer USA</p>
-</div>
-
-<div class="scroll-card">
-<img src="https://images.unsplash.com/photo-1505666287802-931dc83a0a4e">
-<p>Green Card Help</p>
-</div>
-
-<div class="scroll-card">
-<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85">
-<p>Work Permit USA</p>
-</div>
-
-<div class="scroll-card">
-<img src="https://images.unsplash.com/photo-1588776814546-ec7d94e6e7a3">
-<p>Visa Legal Advice</p>
-</div>
-
-<!-- duplicate for smooth loop -->
-<div class="scroll-card">
-<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f">
-<p>Immigration Lawyer USA</p>
-</div>
+<div class="scroll-card"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f"><p>Immigration Lawyer</p></div>
+<div class="scroll-card"><img src="https://images.unsplash.com/photo-1505666287802-931dc83a0a4e"><p>Green Card Help</p></div>
+<div class="scroll-card"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85"><p>Work Permit</p></div>
+<div class="scroll-card"><img src="https://images.unsplash.com/photo-1588776814546-ec7d94e6e7a3"><p>Visa Advice</p></div>
 
 </div>
 </div>
@@ -261,77 +142,39 @@ footer a {
 
 <div class="grid">
 
-<div class="card" onclick="location.href='post7.html'">
-<img src="https://images.unsplash.com/photo-1515165562835-c3b8c1d3a88d">
-<h3>Amazon Jobs USA</h3>
-</div>
+<div class="card" onclick="location.href='post7.html'"><img src="https://images.unsplash.com/photo-1515165562835-c3b8c1d3a88d"><h3>Amazon Jobs</h3></div>
+<div class="card" onclick="location.href='post8.html'"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"><h3>Google Careers</h3></div>
+<div class="card" onclick="location.href='post9.html'"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4"><h3>Restaurant Jobs</h3></div>
 
-<div class="card" onclick="location.href='post8.html'">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-<h3>Google Careers</h3>
-</div>
-
-<div class="card" onclick="location.href='post9.html'">
-<img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4">
-<h3>Restaurant Jobs</h3>
-</div>
-
-<div class="card" onclick="location.href='post10.html'">
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-<h3>Warehouse Jobs</h3>
-</div>
-
-<div class="card" onclick="location.href='post11.html'">
-<img src="https://images.unsplash.com/photo-1521791055366-0d553872125f">
-<h3>Visa Sponsorship</h3>
-</div>
-
-<div class="card" onclick="location.href='post12.html'">
-<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-<h3>Online Income USA</h3>
-</div>
+<div class="card" onclick="location.href='post10.html'"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"><h3>Warehouse Jobs</h3></div>
+<div class="card" onclick="location.href='post11.html'"><img src="https://images.unsplash.com/photo-1521791055366-0d553872125f"><h3>Visa Sponsorship</h3></div>
+<div class="card" onclick="location.href='post12.html'"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"><h3>Online Income</h3></div>
 
 </div>
 
-</div>
-
-<!-- SIDEBAR -->
-<div class="sidebar">
-
-<div class="side-box">
-<h3>💰 Salary & Finance Tools</h3>
-
-<div class="tool-card" onclick="location.href='salary.html'">💵 Salary After Tax</div>
-<div class="tool-card" onclick="location.href='hourly.html'">⏱ Hourly → Salary</div>
-<div class="tool-card" onclick="location.href='mortgage.html'">🏠 Mortgage Calculator</div>
-<div class="tool-card" onclick="location.href='loan.html'">📊 Loan EMI</div>
-<div class="tool-card" onclick="location.href='credit.html'">💳 Credit Interest</div>
-
-</div>
-
-</div>
-
-</div>
-
-  <h2>📢 More Updates</h2>
+<h2>💰 Salary & Finance Tools</h2>
 
 <div class="grid">
-<div class="card"><h3>Freelance Income Guide</h3></div>
-<div class="card"><h3>USA Salary Growth</h3></div>
-<div class="card"><h3>Best Cities for Jobs</h3></div>
-<div class="card"><h3>Visa Tips 2026</h3></div>
+
+<div class="card" onclick="location.href='salary.html'"><h3>Salary Calculator</h3></div>
+<div class="card" onclick="location.href='hourly.html'"><h3>Hourly to Salary</h3></div>
+<div class="card" onclick="location.href='mortgage.html'"><h3>Mortgage Calculator</h3></div>
+
+<div class="card" onclick="location.href='loan.html'"><h3>Loan EMI</h3></div>
+<div class="card" onclick="location.href='credit.html'"><h3>Credit Interest</h3></div>
+
+</div>
+
 </div>
 
 <footer>
 <p>© 2026 DollarWiseHub America</p>
-
 <p>
-<a href="about.html">About Us</a> |
+<a href="about.html">About</a> |
 <a href="contact.html">Contact</a> |
-<a href="privacy.html">Privacy Policy</a> |
+<a href="privacy.html">Privacy</a> |
 <a href="disclaimer.html">Disclaimer</a>
 </p>
-
 </footer>
 
 </body>
